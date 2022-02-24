@@ -1,11 +1,11 @@
-#Banking Console App
+# Banking Console App
 
-#Descrption
+# Descrption
 This is console-based application that simulated banking operations. A customer can apply
 for an account, view their balance, and make withdrawals and deposits. 
 An employee can approve or deny accounts and view account balances for their customers.
 
-#User Stories
+# User Stories
 - As a user, I can login.
 - As a customer, I can apply for a new bank account with a starting balance.
 - As a customer, I can view the balance of my account.

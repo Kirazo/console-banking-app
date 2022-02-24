@@ -9,7 +9,7 @@ public class DBConnection {
 	public static Connection getConnection() {
 		Connection con = null;
 		try {
-			FileReader rdr = new FileReader("./bankdb.properties");
+			FileReader rdr = new FileReader("./src/main/java/project/bank/utility/bankdb.properties");
 			Properties properties = new Properties();
 			properties.load(rdr);
 			String driver = properties.getProperty("d");
