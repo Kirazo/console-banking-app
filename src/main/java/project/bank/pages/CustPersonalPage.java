@@ -172,6 +172,7 @@ public class CustPersonalPage {
 				id2 = scanner.nextInt();
 			} catch (InputMismatchException e) {
 				System.out.println("ERROR: You must enter a valid account number, please try again.\n");
+				askTransfer = false;
 				filler = scanner.nextLine();
 				tAmount = -1;
 			}
@@ -179,6 +180,7 @@ public class CustPersonalPage {
 				System.out.println("ERROR: id can not be a negative number, please try again.\n");
 				id2 = 0;
 				tAmount = -1;
+				askTransfer = false;
 			}
 			else if(customerDAO.doesCustExist(id2)) {
 				System.out.println("Are you sure you would like to transfer $" + tAmount + " to user "
@@ -188,17 +190,22 @@ public class CustPersonalPage {
 				if(transferInput.equals("Yes")) {
 					customerDAO.transfer(id1, id2, tAmount);
 					transactionDAO.transLog(id1, id2, tAmount);
+					askTransfer = false;
 				}
-				else
+				else {
 					System.out.println("You have cancelled the transaction.");
+					askTransfer = false;
+				}
 			}
 			else {
 				System.out.println("ERROR: User with id: " + id2 + " could not be found in the " +
 									"system.\nPlease try again.\n");
 				tAmount = -1;
+				askTransfer = false;
 			}
 				
 		}
+		askTransfer = false;
 		
 	}
 }

@@ -16,3 +16,6 @@ An employee can approve or deny accounts and view account balances for their cus
 - As an employee, I can approve or reject an account.
 - As an employee, I can view a customer's bank account.
 - As an employee, I can view a log of all transactions.
+
+# Usage
+Please change bankdb.properties in utility folder to match your system. You must change the username and password to fit your database.

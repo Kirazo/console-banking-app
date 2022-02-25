@@ -25,12 +25,14 @@ public class TransactionDAOImpl implements TransactionDAO {
 
 	}
 
-	public void viewTransLog() {
+	public boolean viewTransLog() {
 		PreparedStatement statement = null;
+		boolean success = false;
 		try {
 			statement = con.prepareStatement("select * from transactions order by transId");
 			ResultSet res = statement.executeQuery();
 			while(res.next()) {
+				success = true;
 				System.out.println("Transaction Id: " + res.getInt(1) + " | " + "Sender Id: " + res.getInt(2)
 									+ " | " + "Receiver Id: " + res.getInt(3) + " | " + "Amount: $" + 
 									+ res.getInt(4) + " | " + "Date: " + res.getString(5));
@@ -38,7 +40,7 @@ public class TransactionDAOImpl implements TransactionDAO {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		
+		return success;
 	}
 
 }

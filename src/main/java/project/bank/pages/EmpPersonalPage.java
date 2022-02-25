@@ -154,7 +154,8 @@ public class EmpPersonalPage {
 	}
 	
 	public void transView() {
-		transactionDAO.viewTransLog();
+		if(!transactionDAO.viewTransLog())
+			System.out.println("ERROR: There are no transactions at the moment.");
 	}
 
 }
