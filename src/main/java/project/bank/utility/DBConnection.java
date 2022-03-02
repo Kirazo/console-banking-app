@@ -11,6 +11,7 @@ public class DBConnection {
 		try {
 			//./src/main/java/project/bank/utility/bankdb.properties
 			FileReader rdr = new FileReader("C:\\Users\\Howard\\Desktop\\Eclipse\\Project 0\\bank-app\\src\\main\\java\\project\\bank\\utility\\bankdb.properties");
+			//FileReader rdr = new FileReader("./src/main/java/project/bank/utility/bankdb.properties");
 			Properties properties = new Properties();
 			properties.load(rdr);
 			String driver = properties.getProperty("d");

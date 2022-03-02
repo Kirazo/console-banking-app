@@ -44,7 +44,7 @@ public class BankApp {
 			break;
 
 		case 9:
-			System.out.println("Thanks for using the program");
+			System.out.println("Thank you for using the program");
 			System.exit(0);
 
 		default:
