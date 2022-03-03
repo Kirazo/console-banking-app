@@ -132,7 +132,7 @@ public class CustPersonalPage {
 			wAmount = -1;
 		}
 		if (wAmount == 0)
-			System.out.println("ERROR: You decided not to withdraw\n");
+			System.out.println("You decided not to withdraw\n");
 		else if (wAmount < 0)
 			System.out.println("ERROR: You can not withdraw a negative amount of money, please try again.\n");
 		else
