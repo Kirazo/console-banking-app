@@ -113,7 +113,7 @@ public class CustPersonalPage {
 		}
 		if (transfer == true) {
 			if (dAmount == 0)
-				System.out.println("You decided not to withdraw\n");
+				System.out.println("You decided not to deposit\n");
 			else if (dAmount < 0)
 				System.out.println("ERROR: You can not deposit a negative amount of money, please try again.\n");
 			else
