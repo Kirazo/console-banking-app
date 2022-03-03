@@ -1,6 +1,7 @@
 # Banking Console App
+Programmed by: Howard Tep
 
-# Descrption
+# Description
 This is console-based application that simulated banking operations. A customer can apply
 for an account, view their balance, and make withdrawals and deposits. 
 An employee can approve or deny accounts and view account balances for their customers.
@@ -18,4 +19,6 @@ An employee can approve or deny accounts and view account balances for their cus
 - As an employee, I can view a log of all transactions.
 
 # Usage
-Please change bankdb.properties in utility folder to match your system. You must change the username and password to fit your database.
+- Change bankdb.properties in utility folder to match your system.
+- You must change the 'username' and 'password' in bankdb.properties to fit your database.
+- Change 'FileReader' to your bankdb.properties file path inside the DBConnection file in utility folder to match you system.
